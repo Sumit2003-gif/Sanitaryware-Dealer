@@ -12,15 +12,15 @@ import HomeNews from '../Components/HomeNews'
 
 const Home = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <section>
         <HomeHero/>
       </section>
-      <section className='px-10'>
+      <section>
         <HomeHowItWorks/>
       </section>
       <section>
-        <HomeAbout/>
+        {/* <HomeAbout/> */}
       </section>
       <section>
         <HomeIndustries/>

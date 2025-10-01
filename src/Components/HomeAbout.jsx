@@ -2,7 +2,6 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { i } from "framer-motion/client";
 
 const features = [
   "Lorem Ipsum is not simply random text",
@@ -26,11 +25,11 @@ const itemVariants = {
 
 const HomeAbout = () => {
   return (
-    <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 py-20 px-6 sm:px-10 lg:px-14">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-around items-center gap-16 lg:gap-28">
+    <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 py-16 md:py-20 px-4 sm:px-6 lg:px-14">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-16">
         {/* Left - Image and Experience */}
         <motion.div
-          className="relative w-full lg:w-1/2"
+          className="relative w-full lg:w-5/12"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -39,24 +38,24 @@ const HomeAbout = () => {
           <img
             src="https://pixydrops.com/wostin/main-html/assets/images/resources/leading-waste-img-1.jpg"
             alt="Worker"
-            className="w-full h-full object-cover rounded-xl shadow-lg"
+            className="w-full h-auto rounded-xl shadow-lg"
           />
 
           {/* Experience Bubble */}
-          <div className="absolute -top-16 -left-10 bg-[#558E4C] text-white px-10 py-8 w-40 text-center shadow-md rounded-lg">
+          <div className="absolute -top-10 md:-top-16 -left-6 md:-left-10 bg-[#558E4C] text-white px-6 md:px-10 py-6 md:py-8 w-32 md:w-40 text-center shadow-md rounded-lg">
             <p
-              className="text-[#ECDD5E] text-6xl font-semibold leading-none"
+              className="text-[#ECDD5E] text-4xl md:text-6xl font-semibold leading-none"
               style={{ fontFamily: "'Amatic SC', cursive" }}
             >
               18
               <span
-                className="text-6xl align-middle"
+                className="text-4xl md:text-6xl align-middle"
                 style={{ fontFamily: "'Amatic SC', cursive" }}
               >
                 +
               </span>
             </p>
-            <p className="text-lg font-medium mt-2 leading-tight">
+            <p className="text-sm md:text-lg font-medium mt-2 leading-tight">
               Years of
               <br />
               Experience
@@ -74,14 +73,14 @@ const HomeAbout = () => {
           <img
             src="https://pixydrops.com/wostin/main-html/assets/images/shapes/leading-waste-img-shape-1.png"
             alt="Decoration"
-            className="absolute bottom-[-30px] -right-16 w-[90%] pointer-events-none"
+            className="absolute bottom-[-20px] md:bottom-[-30px] -right-10 md:-right-16 w-[80%] md:w-[90%] pointer-events-none"
             style={{ animation: "floatX 4s ease-in-out infinite" }}
           />
         </motion.div>
 
         {/* Right - Content */}
         <motion.div
-          className="w-full lg:w-1/2"
+          className="w-full lg:w-6/12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -98,7 +97,7 @@ const HomeAbout = () => {
 
           {/* Main Heading with fade + slight slide */}
           <motion.h2
-            className="text-4xl md:text-6xl font-extrabold text-[#404A3D] leading-tight mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#404A3D] leading-tight mb-4 md:mb-6"
             style={{ fontFamily: "'Amatic SC', cursive" }}
             variants={itemVariants}
           >
@@ -109,12 +108,12 @@ const HomeAbout = () => {
 
           {/* Paragraph */}
           <motion.p
-            className="text-[#878986] text-2xl mb-6"
+            className="text-[#878986] text-lg md:text-xl lg:text-2xl mb-6"
             variants={itemVariants}
           >
-            We’re in this business{" "}
+            We're in this business{" "}
             <span
-              className="text-[#558E4C] text-2xl underline underline-offset-4 decoration-[#ECDD5E]"
+              className="text-[#558E4C] text-xl md:text-2xl underline underline-offset-4 decoration-[#ECDD5E]"
               style={{ fontFamily: "'Amatic SC', cursive" }}
             >
               since 1987
@@ -136,22 +135,22 @@ const HomeAbout = () => {
                 <span className="text-white text-sm bg-[#558E4C] p-1 rounded-full flex items-center justify-center">
                   <FaCheck />
                 </span>
-                <span className="text-md text-[#404A3D]">{item}</span>
+                <span className="text-base md:text-lg text-[#404A3D]">{item}</span>
               </motion.li>
             ))}
           </motion.ul>
 
           {/* Button with sliding hover effect */}
           <Link to="/about">
-          <button className="relative cursor-pointer overflow-hidden bg-[#ECDD5E] text-[#404A3D] font-bold py-3 px-8 rounded-lg shadow-md group">
-            {/* Left sliding background */}
-            <span className="absolute top-0 left-0 w-1/2 h-full bg-[#558E4C] -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out pointer-events-none"></span>
-            {/* Right sliding background */}
-            <span className="absolute top-0 right-0 w-1/2 h-full bg-[#558E4C] translate-x-full group-hover:translate-x-0 transition-transform  duration-500 ease-in-out pointer-events-none"></span>
+            <button className="relative cursor-pointer overflow-hidden bg-[#ECDD5E] text-[#404A3D] font-bold py-3 px-8 rounded-lg shadow-md group">
+              {/* Left sliding background */}
+              <span className="absolute top-0 left-0 w-1/2 h-full bg-[#558E4C] -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out pointer-events-none"></span>
+              {/* Right sliding background */}
+              <span className="absolute top-0 right-0 w-1/2 h-full bg-[#558E4C] translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out pointer-events-none"></span>
 
-            {/* Button text */}
-            <span className="relative z-10 group-hover:text-white">Discover More</span>
-          </button>
+              {/* Button text */}
+              <span className="relative z-10 group-hover:text-white">Discover More</span>
+            </button>
           </Link>
         </motion.div>
       </div>
@@ -162,28 +161,6 @@ const HomeAbout = () => {
           @keyframes floatX {
             0%, 100% { transform: translateX(10px); }
             50% { transform: translateX(30px); }
-          }
-          @media (max-width: 1024px) {
-            /* Adjust experience bubble for smaller screens */
-            .absolute.-top-16.-left-10 {
-              top: -12rem;
-              left: -1.5rem;
-              width: 10rem;
-              padding: 1.5rem 1.75rem;
-            }
-          }
-          @media (max-width: 640px) {
-            .absolute.-top-16.-left-10 {
-              top: -8rem;
-              left: -1rem;
-              width: 8rem;
-              padding: 1rem 1.25rem;
-            }
-            .absolute.bottom-[-30px].-right-16 {
-              bottom: -15px;
-              right: -8px;
-              width: 100%;
-            }
           }
         `}
       </style>
