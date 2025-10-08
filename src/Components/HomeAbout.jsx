@@ -62,11 +62,7 @@ const HomeAbout = () => {
             </p>
 
             {/* Triangle */}
-            <div
-              className="absolute bottom-0 -right-5 w-0 h-0 
-              border-t-[20px] border-t-transparent 
-              border-l-[20px] border-l-[#558E4C]"
-            />
+            
           </div>
 
           {/* Decorative Shape with float animation */}

@@ -51,7 +51,7 @@ const textVariants = {
 
 const HomeHowItWorks = () => {
   return (
-    <section className="bg-[#404A3D] text-white w-full -mt-24 relative z-10 rounded-t-3xl shadow-2xl py-14 pb-12 px-6 sm:px-8 md:px-12 lg:px-20">
+    <section className="bg-[#404A3D] hidden lg:block justify-center items-center text-white w-full -mt-24 relative z-10 rounded-t-3xl shadow-2xl py-14 pb-12 px-6 sm:px-8 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10 md:gap-20"
