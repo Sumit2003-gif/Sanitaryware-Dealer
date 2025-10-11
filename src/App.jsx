@@ -11,7 +11,7 @@ import SinglePerNews from './Components/SinglePerNews'
 
 const App = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <ScrollToTop/>
       <Navbar/>
       <Routes>
