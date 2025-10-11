@@ -29,20 +29,22 @@ const staggerContainer = {
   }
 };
 
+const ScrollToTop = () => {
+  window.scrollTo({top:0,behavior:'smooth'})
+}
+
 const Footer = () => {
   const links = [
     { name: 'About', path: '/about' },
-    { name: 'Request Pickup', path: '/request-pickup' },
-    { name: 'Management', path: '/management' },
-    { name: 'Start Service', path: '/start-service' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
   const services = [
-    { name: 'Dumpster Rentals', path: '/services/dumpster-rentals' },
-    { name: 'Bulk Trash Pickup', path: '/services/bulk-trash-pickup' },
-    { name: 'Waste Removal', path: '/services/waste-removal' },
-    { name: 'Zero Waste', path: '/services/zero-waste' },
+    { name: 'Dumpster Rentals', path: '/' },
+    { name: 'Bulk Trash Pickup', path: '/' },
+    { name: 'Waste Removal', path: '/' },
+    { name: 'Zero Waste', path: '/' },
   ];
 
   const socialIcons = [
@@ -163,7 +165,9 @@ const Footer = () => {
                   custom={0.1 * i}
                 >
                   <span className="text-[#e7da5f]">➔</span>
-                  <Link to={item.path}>{item.name}</Link>
+                  <Link to={item.path}
+                  onClick={ScrollToTop}
+                  >{item.name}</Link>
                 </motion.li>
               ))}
             </ul>

@@ -24,8 +24,8 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <motion.nav
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        // initial={{ x: -100, opacity: 0 }}
+        // animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="bg-white shadow-sm sticky top-0 left-0 w-full z-50"
       >

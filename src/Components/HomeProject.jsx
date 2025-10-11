@@ -133,12 +133,14 @@ const HomeProject = () => {
           "
         >
           {cardsData.map((card, idx) => (
+            <div key={idx} className="flex justify-center items-center">
             <Card
-              key={idx}
+              
               url={card.url}
               header={card.subheading}
               texter={card.heading}
             />
+            </div>
           ))}
         </div>
       </div>

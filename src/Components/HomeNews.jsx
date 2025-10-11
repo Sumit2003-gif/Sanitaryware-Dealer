@@ -72,7 +72,7 @@ const HomeNews = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             custom={index + 1}
-            className="w-full md:w-1/3"
+            className="w-full md:w-1/3 flex justify-center"
           >
             <NewsCard
               url={post.imageUrl}

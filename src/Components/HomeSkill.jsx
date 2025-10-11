@@ -202,14 +202,14 @@ const HomeSkill = () => {
 
       {/* Cards section */}
       <section
-        className="relative bg-cover bg-center flex justify-center items-center h-[90vh] px-6 md:px-0"
+        className="relative hidden  bg-cover bg-center lg:flex justify-center items-center h-[90vh] px-6 md:px-0"
         style={{
           backgroundImage:
             "url('https://pixydrops.com/wostin/main-html/assets/images/backgrounds/counter-one-bg.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-[#518748]/90"></div>
-        <div className="flex flex-col sm:flex-row gap-8 p-8 pt-10 justify-center max-w-7xl w-full">
+        <div className="flex  sm:flex-row gap-8 p-8 pt-10 justify-center max-w-7xl w-full">
           {cardsData.map((card, idx) => (
             <Card key={idx} {...card} />
           ))}
